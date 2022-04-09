@@ -9,6 +9,6 @@ namespace Pomoro_Language_Learning.Models
 
         }
 
-        public DbSet login { get; set; }
+        public DbSet<LoginAndRegister> login { get; set; }
     }
 }
