@@ -8,5 +8,9 @@ namespace Pomoro_Language_Learning.Controllers
         {
             return View();
         }
+        public IActionResult Login()
+        {
+            return View();
+        }
     }
 }
