@@ -6,17 +6,17 @@ using Pomoro_Language_Learning.Areas.Identity.Data;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection");;
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<Pomoro_Language_Learning.Areas.Identity.Data.ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));;
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();;
+    .AddEntityFrameworkStores<Pomoro_Language_Learning.Areas.Identity.Data.ApplicationDbContext>();;
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
-    builder.Configuration.GetConnectionString("DefaultConnections")
-));
+//builder.Services.AddDbContext<Pomoro_Language_Learning.Areas.Identity.Data.ApplicationDbContext>(options => options.UseSqlServer(
+ //   builder.Configuration.GetConnectionString("DefaultConnections")
+//));
 
 var app = builder.Build();
 
@@ -39,5 +39,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapRazorPages();
 
 app.Run();
