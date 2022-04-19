@@ -10,7 +10,7 @@ using Pomoro_Language_Learning.Models;
 
 namespace Pomoro_Language_Learning.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(ApplicationDbContext1))]
     [Migration("20220413050355_AddLoginToDatabase")]
     partial class AddLoginToDatabase
     {
