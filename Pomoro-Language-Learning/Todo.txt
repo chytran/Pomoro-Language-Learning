@@ -1,0 +1,15 @@
+﻿<------------------ TODO ------------------->
+
+4/19/2022
+Kevin Tran
+-- Decorate Index and Layout.cshtml
+
+4/19/2022
+Nick
+-- Find Information on spanish data to use
+
+
+4/19/2022
+Matt Razo
+-- Research Translation for text
+
