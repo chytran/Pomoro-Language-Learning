@@ -37,6 +37,8 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     
 });
 
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 //builder.Services.AddDbContext<Pomoro_Language_Learning.Areas.Identity.Data.ApplicationDbContext>(options => options.UseSqlServer(

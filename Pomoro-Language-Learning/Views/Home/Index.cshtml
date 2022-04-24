@@ -1,8 +1,13 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@using Pomoro_Language_Learning.Controllers
+@using Microsoft.Extensions.Localization
+
+@inject IStringLocalizer<HomeController> Localizer
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">
+         @Localizer["PageTitle"]
+    </h1>
+    <p>
+         @Localizer["PageDesc"]
+    </p>
 </div>
