@@ -1,13 +1,15 @@
-﻿@using Pomoro_Language_Learning.Controllers
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Pomoro_Language_Learning.Controllers
 @using Microsoft.Extensions.Localization
 
 @inject IStringLocalizer<HomeController> Localizer
+@inject IHtmlLocalizer<HomeController> HtmlLocalizer
 
 <div class="text-center">
     <h1 class="display-4">
-         @Localizer["PageTitle"]
+        @ViewData["PageTitle"]
     </h1>
     <p>
-         @Localizer["PageDesc"]
+        @ViewData["PageDesc"]
     </p>
 </div>

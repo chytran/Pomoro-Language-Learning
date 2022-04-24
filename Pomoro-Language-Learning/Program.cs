@@ -14,12 +14,14 @@ builder.Services.AddDbContext<Pomoro_Language_Learning.Areas.Identity.Data.Appli
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<Pomoro_Language_Learning.Areas.Identity.Data.ApplicationDbContext>();;
 
+// Localization
 builder.Services.AddLocalization(options =>
 {
     options.ResourcesPath = "Resources";
 });
 
-builder.Services.AddControllersWithViews().AddViewLocalization();
+builder.Services.AddControllersWithViews()
+    .AddViewLocalization();
 
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
@@ -27,18 +29,14 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 
     var cultures = new CultureInfo[]
     {
-        new CultureInfo("en-US"),
-        new CultureInfo("de-De"),
+            new CultureInfo("en-US"),
+            new CultureInfo("de-DE")
     };
 
     options.SupportedCultures = cultures;
     options.SupportedUICultures = cultures;
 
-    
 });
-
-
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 //builder.Services.AddDbContext<Pomoro_Language_Learning.Areas.Identity.Data.ApplicationDbContext>(options => options.UseSqlServer(

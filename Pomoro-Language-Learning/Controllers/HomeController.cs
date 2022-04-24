@@ -15,10 +15,10 @@ namespace Pomoro_Language_Learning.Controllers
             _stringLocalizer = stringLocalizer;
         }
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+          //  _logger = logger;
+        //}
 
         public IActionResult Index()
         {
@@ -31,6 +31,10 @@ namespace Pomoro_Language_Learning.Controllers
 
         public IActionResult Privacy()
         {
+            // Call values from the resource files
+            ViewData["PageTitle"] = _stringLocalizer["page.title"].Value;
+            ViewData["PageDesc"] = _stringLocalizer["page.description"].Value;
+
             return View();
         }
 
