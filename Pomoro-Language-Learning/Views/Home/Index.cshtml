@@ -1,15 +1,8 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
-@using Pomoro_Language_Learning.Controllers
-@using Microsoft.Extensions.Localization
-
-@inject IStringLocalizer<HomeController> Localizer
-@inject IHtmlLocalizer<HomeController> HtmlLocalizer
+﻿
+@inject LanguageService language
 
 <div class="text-center">
     <h1 class="display-4">
-        @ViewData["PageTitle"]
+        @language.Getkey("page.title")
     </h1>
-    <p>
-        @ViewData["PageDesc"]
-    </p>
 </div>
