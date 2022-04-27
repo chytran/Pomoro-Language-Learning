@@ -18,51 +18,35 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 
 // Localization
 
-builder.Services.AddSingleton<LanguageService>();
 
-builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+// builder.Services.AddLocalization(options => { options.ResourcesPath = "Resources"; });
+
 
 builder.Services.AddMvc()
-    .AddViewLocalization()
-    .AddDataAnnotationsLocalization(options =>
-    {
-        options.DataAnnotationLocalizerProvider = (type, factory) =>
-        {
+        .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix)
+        .AddDataAnnotationsLocalization();
 
-            var assemblyName = new AssemblyName(typeof(ShareResource).GetTypeInfo().Assembly.FullName);
-
-            return factory.Create("ShareResource", assemblyName.Name);
-
-        };
-
-    });
-
-builder.Services.Configure<RequestLocalizationOptions>(
-    options =>
-    {
-        var supportedCultures = new List<CultureInfo>
-            {
-                new CultureInfo("en-US"),
-                new CultureInfo("de-DE")
-            };
-
-
-
-        options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
-
-        options.SupportedCultures = supportedCultures;
-        options.SupportedUICultures = supportedCultures;
-        options.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
-
-    });
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var culture = new List<CultureInfo> {
+        new CultureInfo("en-US"),
+        new CultureInfo("de-DE"),
+    };
+    //options.DefaultRequestCulture = new RequestCulture(culture[0]);
+    options.DefaultRequestCulture = new RequestCulture("en");
+    options.SupportedCultures = culture;
+    options.SupportedUICultures = culture;
+});
 
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 //builder.Services.AddDbContext<Pomoro_Language_Learning.Areas.Identity.Data.ApplicationDbContext>(options => options.UseSqlServer(
- //   builder.Configuration.GetConnectionString("DefaultConnections")
+//   builder.Configuration.GetConnectionString("DefaultConnections")
 //));
 
+// optional
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 var options = ((IApplicationBuilder)app).ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>();
