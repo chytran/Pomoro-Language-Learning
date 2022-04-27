@@ -30,10 +30,10 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     var culture = new List<CultureInfo> {
         new CultureInfo("en-US"),
-        new CultureInfo("de-DE"),
+        new CultureInfo("de-De"),
     };
     //options.DefaultRequestCulture = new RequestCulture(culture[0]);
-    options.DefaultRequestCulture = new RequestCulture("en");
+    options.DefaultRequestCulture = new RequestCulture("en-US");
     options.SupportedCultures = culture;
     options.SupportedUICultures = culture;
 });
@@ -49,9 +49,12 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
-var options = ((IApplicationBuilder)app).ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>();
 
-app.UseRequestLocalization(options.Value);
+
+app.UseRequestLocalization();
+//var options = ((IApplicationBuilder)app).ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>();
+
+//app.UseRequestLocalization(options.Value);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
