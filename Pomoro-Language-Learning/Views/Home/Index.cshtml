@@ -8,11 +8,28 @@
 @inject IViewLocalizer ViewLocalizer
  
 <div class="text-center">
-    <h1 class="display-4">
-        @Localizer["page.title"]
-    </h1>
-    <p>
-        @HtmlLocalizer["page.description"]
-    </p>
-    
-</div>
+        <div id="header">
+            <div class="display-3">
+                <div class="header-list">
+                    <a class="header-items" href=".">HOME</a>
+                    <a class="header-items" href=".">ABOUT</a>
+                    <a class="header-items" href=".">SERVICES</a>
+                    <a class="header-items" href=".">GALLERY</a>
+                    <a class="header-items" href=".">BLOG</a>
+                    <a class="header-items" href=".">CONTACTS</a>
+                </div>
+            </div>
+         </div>
+        <div id="header">
+           <h1 class="display-4">
+                 @Localizer["page.title"] 
+                Efficient Language Learning comes <br> from creating more Pomoros!
+            </h1>
+            <span class="display-4-span">
+                @HtmlLocalizer["page.description"]
+                Begin to understand the process of language acquisition now
+            </span> 
+        </div>
+        
+        
+    </div>
