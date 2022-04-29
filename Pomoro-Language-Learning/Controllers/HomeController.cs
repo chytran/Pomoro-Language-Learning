@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Pomoro_Language_Learning.Models;
 using System.Diagnostics;
@@ -30,6 +31,20 @@ namespace Pomoro_Language_Learning.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult ChangeLanguage(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                    new CookieOptions
+                    {
+                        Expires = DateTimeOffset.UtcNow.AddDays(7)
+                    }
+            );
+
+            return LocalRedirect(returnUrl);
+        }
         public IActionResult Privacy()
         {
             // Call values from the resource files
