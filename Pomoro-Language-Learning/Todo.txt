@@ -1,15 +1,16 @@
 ﻿<------------------ TODO ------------------->
 
-4/19/2022
+4/28/2022
 Kevin Tran
--- Decorate Index and Layout.cshtml
+-- Decorate Body
 
-4/19/2022
+4/28/2022
 Nick
--- Find Information on spanish data to use
+-- Decorate footer
 
 
-4/19/2022
+4/28/2022
 Matt Razo
--- Research Translation for text
+-- Decorate header
+
 
