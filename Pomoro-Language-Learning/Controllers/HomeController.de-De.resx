@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="page.description" xml:space="preserve">
-    <value>Dies ist die Startseite der Anwendung</value>
+    <value>Beginnen Sie jetzt, den Prozess des Spracherwerbs zu verstehen</value>
   </data>
   <data name="page.title" xml:space="preserve">
-    <value>Heim</value>
+    <value>Effizientes Sprachenlernen ergibt sich &lt;br&gt; aus der Schaffung von mehr Pomoros!</value>
   </data>
 </root>
