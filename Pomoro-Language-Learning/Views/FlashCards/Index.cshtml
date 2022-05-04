@@ -1,0 +1,34 @@
+﻿@using Pomoro_Language_Learning.Areas.Identity.Data
+@model IEnumerable<FlashCards>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Untranslated
+            </th>
+            <th>
+                Translated
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td width="50%">
+                    @obj.NonTranslated
+                </td>
+                <td width="50%">
+                    @obj.Translated
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
