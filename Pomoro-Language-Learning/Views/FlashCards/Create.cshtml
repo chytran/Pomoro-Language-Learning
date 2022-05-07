@@ -6,6 +6,24 @@
 }
 
 <form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Flashcards</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="NonTranslated"></label>
+            <input asp-for="NonTranslated" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Translated"></label>
+            <input asp-for="Translated" class="form-control"/>
+        </div>
 
+        <button type="submit" class="btn-primary btn" style="width:150px">Create</button>
+        <a asp-controller="FlashCards" asp-action="Index" class="btn-bg-secondary btn" style="width: 150px">
+            Back to List
+        </a>
+    </div>
 </form>
 
