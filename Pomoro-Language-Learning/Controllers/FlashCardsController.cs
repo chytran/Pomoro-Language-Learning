@@ -14,6 +14,8 @@ namespace Pomoro_Language_Learning.Controllers
 
         public IActionResult Index()
         {
+
+
             IEnumerable<FlashCards> objFlashCardsList = _db.FlashCards;
             return View(objFlashCardsList);
         }
