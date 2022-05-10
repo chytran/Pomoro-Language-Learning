@@ -21,14 +21,16 @@
     <tbody>
         @foreach(var obj in Model)
         {
-            <tr>
-                <td width="50%">
-                    @obj.NonTranslated
-                </td>
-                <td width="50%">
-                    @obj.Translated
-                </td>
-            </tr>
+            <div class="card-container">
+                <div class="card" id="card">
+                    <div class="front">
+                        <h1>@obj.NonTranslated</h1>
+                    </div>
+                    <div class="back">
+                        <h1>@obj.Translated</h1>
+                    </div>
+                </div>
+             </div>
         }
     </tbody>
 </table>
