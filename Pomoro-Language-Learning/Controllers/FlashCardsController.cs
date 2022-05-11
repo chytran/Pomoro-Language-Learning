@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Pomoro_Language_Learning.Areas.Identity.Data;
+
 
 namespace Pomoro_Language_Learning.Controllers
 {
@@ -16,9 +18,11 @@ namespace Pomoro_Language_Learning.Controllers
         {
 
 
-            IEnumerable<FlashCards> objFlashCardsList = _db.FlashCards;
+            IEnumerable<FlashCards> objFlashCardsList = _db.FlashCards.FromSqlRaw("Select * FROM FlashCards WHERE Id = 4")
+                .ToList();
             return View(objFlashCardsList);
         }
+
 
         // GET
         public IActionResult Create()
