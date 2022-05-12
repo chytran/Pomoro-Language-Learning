@@ -17,11 +17,13 @@ namespace Pomoro_Language_Learning.Controllers
         public IActionResult Index()
         {
 
-
-            IEnumerable<FlashCards> objFlashCardsList = _db.FlashCards.FromSqlRaw("Select * FROM FlashCards WHERE Id = 4")
+            var i = 4;
+            IEnumerable<FlashCards> objFlashCardsList = _db.FlashCards.FromSqlRaw($"Select * FROM FlashCards WHERE Id = 4{i}")
                 .ToList();
             return View(objFlashCardsList);
         }
+
+
 
 
         // GET

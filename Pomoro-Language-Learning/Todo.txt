@@ -1,18 +1,17 @@
 ﻿<------------------ TODO ------------------->
 
-4/28/2022
+5/12/2022
 Kevin Tran
--- Filtering one at a time for cards
--- manipulate query if possible
+-- Query to display random card
+-- Design the page that holds the cards
 
 4/28/2022
 Nick
 -- Decorate footer
 
 
-4/28/2022
+5/12/2022
 Matt Razo
--- Decorate Cards
--- manipulate query
+-- Decorate Home page with transparency design
 
 
