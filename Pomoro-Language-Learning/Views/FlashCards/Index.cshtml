@@ -23,14 +23,21 @@
         {
             <div class="card-container">
                 <div class="card" id="card">
-                    <div class="front">
-                        <h1>@obj.NonTranslated</h1>
+                    <div class="front face">
+                        <div class="card-text">@obj.NonTranslated</div>
                     </div>
-                    <div class="back">
-                        <h1>@obj.Translated</h1>
+                    <div class="back face">
+                        <div class="card-text">@obj.Translated</div>
                     </div>
                 </div>
              </div>
         }
     </tbody>
 </table>
+
+<script type="text/javascript">
+    var card = document.querySelector('.card');
+card.addEventListener('click', function () {
+    card.classList.toggle('is-flipped');
+});
+</script>

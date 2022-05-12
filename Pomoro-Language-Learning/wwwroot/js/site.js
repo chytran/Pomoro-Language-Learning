@@ -4,9 +4,11 @@
 // Write your JavaScript code.
 
 // card flip effect
-.flipCard {
-    transform: rotateY(180deg);
-}
+
+var card = document.querySelector('.card');
+card.addEventListener('click', function () {
+    card.classList.toggle('is-flipped');
+});
 
 const card = document.getElementById("card")
 

@@ -75,6 +75,7 @@ a.navheader {
     transform-style: preserve-3d;
     transition: all 0.8s ease;
     background-color: #2e3a4a;
+    cursor: pointer;
 }
 
 .card-text {
@@ -92,8 +93,15 @@ a.navheader {
     color: aliceblue;
 }
 
+/*
 .card:hover {
     transform: rotateY(180deg);
+}
+*/
+
+.face {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .front {
@@ -109,6 +117,10 @@ a.navheader {
     height: 100%;
     backface-visibility: hidden;
     text-align: center;
+    transform: rotateY(180deg);
+}
+
+.card.is-flipped {
     transform: rotateY(180deg);
 }
 
