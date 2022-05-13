@@ -52,5 +52,19 @@ namespace Pomoro_Language_Learning.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        // GET
+        public IActionResult Review()
+        {
+            return View();
+        }
+
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Review(FlashCards obj)
+        {
+            return RedirectToAction("Index");
+        }
     }
 }
