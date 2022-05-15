@@ -1,8 +1,7 @@
 ﻿<------------------ TODO ------------------->
 
-5/12/2022
+5/15/2022
 Kevin Tran
--- Query to display random card
 -- Design the page that holds the cards
 
 4/28/2022
@@ -10,7 +9,7 @@ Nick
 -- Decorate footer
 
 
-5/12/2022
+5/15/2022
 Matt Razo
 -- Decorate Home page with transparency design
 
