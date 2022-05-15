@@ -56,7 +56,22 @@ namespace Pomoro_Language_Learning.Controllers
         // GET
         public IActionResult Review()
         {
-            return View();
+            using (var con = new SqlConnection("Server=tcp:pomoro-server.database.windows.net,1433;Initial Catalog=pomoro-db;Persist Security Info=False;User ID=pomoro-sql;Password=2021graduate!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
+            {
+                con.Open();
+                string query = "SELECT COUNT(*) FROM FlashCards";
+                using (var cmd = new SqlCommand(query, con))
+                {
+                    int rowsAmount = (int)cmd.ExecuteScalar();
+                    IEnumerable<FlashCards> objFlashCardsList = _db.FlashCards.FromSqlRaw("Select * FROM FlashCards WHERE Id = floor(rand()*" + rowsAmount + ")");
+                    return View(objFlashCardsList);
+                }
+            }
+            // var i = 4;
+            //var count = _db.FlashCards.FromSqlRaw("SELECT COUNT(*) FROM FlashCards");
+            // IEnumerable<FlashCards> objFlashCardsList = _db.FlashCards.FromSqlRaw($"Select * FROM FlashCards WHERE Id = 4{i}")
+
+
         }
 
         // POST
@@ -64,7 +79,7 @@ namespace Pomoro_Language_Learning.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Review(FlashCards obj)
         {
-            return RedirectToAction("Index");
+            return RedirectToAction("Review");
         }
     }
 }

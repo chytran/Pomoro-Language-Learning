@@ -5,8 +5,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
-
+<style>
+    body {
+        background-color: #FFF;
+    }
+</style>
 
 @foreach(var obj in Model)
 {
@@ -19,7 +22,7 @@
                 <div class="card-text">@obj.Translated</div>
             </div>
         </div>
-        </div>
+    </div>
 }
 
 <script type="text/javascript">
