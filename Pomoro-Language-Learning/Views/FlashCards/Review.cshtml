@@ -14,8 +14,16 @@
         display: flex;
         justify-content: space-between;
         align-content: center;
+        align-self: center;
         color: #121212;
         width: 10%;
+    }
+    
+    .left-button, .know-button, .right-button {
+        color: #121212;
+        font-size: 36px;
+        border: 1px solid #121212;
+        border-radius: 50%;
     }
 </style>
 <section class="review-hero">
@@ -33,9 +41,9 @@
         </div>
     }
     <div class="change-card-container">
-        <div class="left-button">left</div>
-        <div class="know-button">know</div>
-        <div class="right-button">right</div>
+        <a asp-controller="FlashCards" asp-action="Previous" class="left-button"><i class='bx bx-left-arrow-alt'></i></a>
+        <a asp-controller="FlashCards" asp-action="Check" class="know-button"><i class='bx bx-check' ></i></a>
+        <a asp-controller="FlashCards" asp-action="Next" class="right-button"><i class='bx bx-right-arrow-alt' ></i></a>
     </div>
 </section>
 
