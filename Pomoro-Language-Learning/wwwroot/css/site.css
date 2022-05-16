@@ -66,12 +66,27 @@ a.navheader {
     padding-bottom: 3rem;
 }
 
+.main-body {
+    width: 100%;
+}
+
+.review-hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .card-container {
     position: relative;
     width: 250px;
     height: 320px;
     background: none;
     margin-top: 10rem;
+    align-self: center;
+    margin-right:17%;
 }
 
 .card {
