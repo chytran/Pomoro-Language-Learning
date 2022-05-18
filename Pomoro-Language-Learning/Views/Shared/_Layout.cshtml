@@ -30,7 +30,7 @@
 
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow">
             <div class="container-fluid">
                 <a class="navheader" asp-area="" asp-controller="Home" asp-action="Index">Pomoro_Language_Learning</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -40,36 +40,33 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-for="" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="header-text" asp-for="" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
-                        </li>
-                        <!--
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Services</a>
+                            <a class="header-text" asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Gallery</a>
+                            <a class="header-text" asp-area="" asp-controller="Home" asp-action="Privacy">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Blog</a>
+                            <a class="header-text" asp-area="" asp-controller="Home" asp-action="Privacy">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Contacts</a>
+                            <a class="header-text" asp-area="" asp-controller="Home" asp-action="Privacy">Blog</a>
                         </li>
-                        </ul>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="FlashCards" asp-action="Create">FlashCards</a>
+                            <a class="header-text" asp-area="" asp-controller="Home" asp-action="Privacy">Contacts</a>
                         </li>
-                        -->
                     </ul>
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="header-text" asp-area="" asp-controller="FlashCards" asp-action="Create">FlashCards</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="FlashCards" asp-action="Review">Review</a>
+                            <a class="header-text" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="header-text" asp-area="" asp-controller="FlashCards" asp-action="Review">Review</a>
                         </li>
  
                         <li class="nav-item">
@@ -98,10 +95,10 @@
 
     <!-- Main Body -->
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
 
     <!-- Footer -->
     <!--<footer class="border-top footer text-muted">

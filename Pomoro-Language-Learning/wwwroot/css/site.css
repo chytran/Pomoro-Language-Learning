@@ -24,13 +24,18 @@ body {
 }
 
 header {
-    background-color: #E14E3F;
-    color:white;
+    background-color: #0d0c0c86;
+    color: white;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 25px;
 }
 
-
+.header-text {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    text-decoration: none;
+    color: rgba(var(--bs-dark-rgb),var(--bs-text-opacity));
+}
 
 .container {
     width: 100%;
@@ -48,10 +53,17 @@ a.navheader {
     white-space: nowrap;
     color:white;
 }
-    body {
-    background-color: #E14E3F;
-    color: #FFF;
+body {
+    z-index: 1;
+    background: linear-gradient(to bottom, #00000000, #000000), url("/Images/unknown.png");
+    /*background: url("/Images/unknown.png"); 
+            opacity 0 color: #0d0c0c86;
+    /* lighter version
+    background: url(https://i.imgur.com/vjhAtjV.jpg);
+    */
 }
+
+
 
 .text-center {
     width: 100%;
@@ -108,6 +120,11 @@ a.navheader {
     transform: rotateY(180deg);
 }
 */
+
+.page {
+    height: 100vh;
+    width: 100%;
+}
 
 .face {
     -webkit-backface-visibility: hidden;

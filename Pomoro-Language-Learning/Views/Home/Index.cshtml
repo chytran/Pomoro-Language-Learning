@@ -7,7 +7,8 @@
 @inject IHtmlLocalizer<HomeController> HtmlLocalizer
 @inject IViewLocalizer ViewLocalizer
  
-<div class="text-center">
+<!--   this is commented out for the time being, this text has been added to header   -->
+@*<div class="text-center">
         <div id="header">
             <div class="display-3">
                 <div class="header-list">
@@ -20,9 +21,10 @@
                 </div>
             </div>
          </div>
-        </div>
-            
-        <div id="header">
+        </div>*@
+       
+@*        temporarily disabled as this extends background downwards and creates visual issues        *@
+@*        <div id="header">
            <h1 class="display-4">
                  @HtmlLocalizer["page.title"] 
                 <!--Efficient Language Learning comes <br> from creating more Pomoros!-->
@@ -32,7 +34,7 @@
                 @Localizer["page.description"]
                 <!--Begin to understand the process of language acquisition now-->
             </span> 
-        </div>
+        </div>*@
         
         
     </div>
