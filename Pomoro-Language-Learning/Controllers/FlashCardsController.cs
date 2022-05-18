@@ -88,6 +88,7 @@ namespace Pomoro_Language_Learning.Controllers
             using (var con = new SqlConnection("Server=tcp:pomoro-server.database.windows.net,1433;Initial Catalog=pomoro-db;Persist Security Info=False;User ID=pomoro-sql;Password=2021graduate!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
             {
                 con.Open();
+                // get query for previous card, if no previous, randomize
                 string query = "SELECT COUNT(*) FROM FlashCards";
                 using (var cmd = new SqlCommand(query, con))
                 {
@@ -146,6 +147,7 @@ namespace Pomoro_Language_Learning.Controllers
             using (var con = new SqlConnection("Server=tcp:pomoro-server.database.windows.net,1433;Initial Catalog=pomoro-db;Persist Security Info=False;User ID=pomoro-sql;Password=2021graduate!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
             {
                 con.Open();
+                // get query for previous card, if no previous, randomize
                 string query = "SELECT COUNT(*) FROM FlashCards";
                 using (var cmd = new SqlCommand(query, con))
                 {
