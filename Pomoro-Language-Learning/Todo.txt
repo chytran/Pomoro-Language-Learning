@@ -1,8 +1,8 @@
 ﻿<------------------ TODO ------------------->
 
-5/15/2022
+5/20/2022
 Kevin Tran
--- Design the page that holds the cards
+-- Figuring out left, knowing, and right button
 
 4/28/2022
 Nick
