@@ -54,6 +54,22 @@ namespace Pomoro_Language_Learning.Controllers
         }
 
         // GET
+        public IActionResult Know()
+        {
+            return View();
+        }
+
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Know(ReviewCards obj1)
+        {
+            //_db.FlashCards.Add(obj1);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        // GET
         public IActionResult Review()
         {
             using (var con = new SqlConnection("Server=tcp:pomoro-server.database.windows.net,1433;Initial Catalog=pomoro-db;Persist Security Info=False;User ID=pomoro-sql;Password=2021graduate!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))

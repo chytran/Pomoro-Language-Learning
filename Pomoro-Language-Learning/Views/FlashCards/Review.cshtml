@@ -46,8 +46,8 @@
             <!--<input asp-for="Translated" class="form-control"/>-->
         </i></a>
         <form method="post" asp-controller="FlashCards" asp-action="know">
-            <input asp-for="NonTranslated" type="hidden" class="form-control"/>
-            <input asp-for="Translated" type="hidden" class="form-control"/>
+            <input type="hidden" class="form-control" value=""/>
+            <input type="hidden" class="form-control"/>
             <button type="submit" class="right-button"><i class='bx bx-right-arrow-alt' ></i></button>
         </form>
         <!--<a asp-controller="FlashCards" asp-action="Next" class="right-button"><i class='bx bx-right-arrow-alt' ></i></a>-->
