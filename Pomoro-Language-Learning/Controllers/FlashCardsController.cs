@@ -34,9 +34,6 @@ namespace Pomoro_Language_Learning.Controllers
             
         }
 
-
-
-
         // GET
         public IActionResult Create()
         {
