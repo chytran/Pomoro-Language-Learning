@@ -41,10 +41,18 @@
         </div>
     }
     <div class="change-card-container">
-        <a asp-controller="FlashCards" asp-action="Previous" class="left-button"><i class='bx bx-left-arrow-alt'></i></a>
-        <a asp-controller="FlashCards" asp-action="Check" class="know-button"><i class='bx bx-check' >
             <!--<input asp-for="Translated" class="form-control"/>-->
         </i></a>
+        <form method="post" asp-controller="FlashCards" asp-action="Previous">
+            <input type="hidden" class="form-control" value=""/>
+            <input type="hidden" class="form-control"/>
+            <button type="submit" class="right-button"><i class='bx bx-left-arrow-alt'></i></button>
+        </form>
+        <form method="post" asp-controller="FlashCards" asp-action="know">
+            <input type="hidden" class="form-control" value=""/>
+            <input type="hidden" class="form-control"/>
+            <button type="submit" class="right-button"><i class='bx bx-check' ></i></button>
+        </form>
         <form method="post" asp-controller="FlashCards" asp-action="know">
             <input type="hidden" class="form-control" value=""/>
             <input type="hidden" class="form-control"/>
