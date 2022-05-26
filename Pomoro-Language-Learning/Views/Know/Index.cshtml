@@ -4,5 +4,48 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Know</h1>
+<style>
+    body {
+        background-color: #FFF;
+    }
+
+    .change-card-container {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-self: center;
+        color: #121212;
+        width: 10%;
+    }
+    
+    .left-button, .know-button, .right-button {
+        color: #121212;
+        font-size: 36px;
+        border: 1px solid #121212;
+        border-radius: 50%;
+    }
+</style>
+<section class="review-hero">
+@foreach(var obj in Model)
+    {
+        <div class="card-container">
+            <div class="card" id="card">
+                <div class="front face">
+                    <div class="card-text">@obj.NonTranslated</div>
+                </div>
+                <div class="back face">
+                    <div class="card-text">@obj.Translated</div>
+                </div>
+            </div>
+        </div>
+    }
+</section>
+
+
+<script type="text/javascript">
+var card = document.querySelector('.card');
+card.addEventListener('click', function () {
+    card.classList.toggle('is-flipped');
+});
+</script>
 
