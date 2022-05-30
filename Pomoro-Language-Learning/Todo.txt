@@ -4,6 +4,7 @@
 Kevin Tran
 -- Figuring out left, knowing, and right button
 -- Trying to transfer data from one table to another
+-- Trying to scan words
 
 4/28/2022
 Nick
