@@ -122,7 +122,7 @@ namespace Pomoro_Language_Learning.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Previous(FlashCards obj)
         {
-            return RedirectToAction("Review");
+            return RedirectToAction("Index");
         }
 
         // GET
@@ -181,7 +181,7 @@ namespace Pomoro_Language_Learning.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Next(FlashCards obj)
         {
-            return RedirectToAction("Review");
+            return RedirectToAction("Index");
         }
     }
 }
