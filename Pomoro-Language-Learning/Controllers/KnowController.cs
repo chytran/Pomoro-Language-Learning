@@ -27,6 +27,7 @@ namespace Pomoro_Language_Learning.Controllers
 
                     //}
                     IEnumerable<FlashCards> objFlashCardsList = _db.FlashCards.FromSqlRaw("Select * FROM ReviewCards WHERE Id = floor(rand()*" + rowsAmount + ")");
+                    // add flash card list to the view page
                     return View(objFlashCardsList);
                 }
             }
