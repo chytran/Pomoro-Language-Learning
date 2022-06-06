@@ -1,10 +1,11 @@
 ﻿<------------------ TODO ------------------->
 
-5/21/2022
+6/5/2022
 Kevin Tran
 -- Figuring out left, knowing, and right button
 -- Trying to transfer data from one table to another
 -- Trying to scan words
+-- Connect dictionary to words
 
 4/28/2022
 Nick
