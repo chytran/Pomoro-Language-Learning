@@ -166,6 +166,7 @@ namespace Pomoro_Language_Learning.Controllers
                 using (var cmd = new SqlCommand(query, con))
                 {
                     int rowsAmount = (int)cmd.ExecuteScalar();
+                    // get random card from deck
                     IEnumerable<FlashCards> objFlashCardsList = _db.FlashCards.FromSqlRaw("Select * FROM FlashCards WHERE Id = floor(rand()*" + rowsAmount + ")");
                     return View(objFlashCardsList);
                 }
