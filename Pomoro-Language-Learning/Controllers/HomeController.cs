@@ -24,7 +24,6 @@ namespace Pomoro_Language_Learning.Controllers
         public IActionResult Index()
         {
             // Call values from the resource files
-            // ViewData["PageTitle"] = _stringLocalizer["page.title"].Value;
             ViewData["PageTitle"] = _stringLocalizer["page.title"].Value;
             ViewData["PageDesc"] = _stringLocalizer["page.description"].Value;
 
