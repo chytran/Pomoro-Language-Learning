@@ -7,10 +7,6 @@ Kevin Tran
 -- Trying to scan words
 -- Connect dictionary to words
 
-4/28/2022
-Nick
--- Decorate footer
-
 
 5/15/2022
 Matt Razo
